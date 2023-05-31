@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content;
+    width: 40.6rem;
+    padding: 15px;
+    gap: 15px;
+
+    border-radius: 8px;
+    background: var(--color-deeper);
+}
+
+.topRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.title {
+    flex: 1;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.buttons {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.buttons > button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    flex: 1;
+    padding: 5px;
+}
+
+.buttons > button:active {
+    border:none;
+    background-color: #24243d ;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.searchBox {
+    align-self: center;
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+
+    background-color: #24243d;
+    border-radius: 5px;
+    padding: 16px 24px;
+}
+
+.searchBox > input{
+    border: none;
+    background-color: transparent;
+    outline: none;
+
+    width: 276px;
+    height: 14px;
+  
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #E1E1E6;
+}
+
+.searchBox > input::placeholder {
+    color: #E1E1E6;
+  }
+
+.searchBox > img {
+    width: 13px;
+    height: 13px;
+}
+
