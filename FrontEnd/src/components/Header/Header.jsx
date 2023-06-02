@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { api, server } from "../../api/axios";
-import { Contato, Delete, Update } from '../Contatos/Contatos'
+import { Contato, Delete, Update } from '../Contatos/Contatos';
 
 import style from './Header.module.css';
 
@@ -16,7 +16,7 @@ export function Header () {
     const [value, setValue] = useState('');
 
     useEffect(() => {
-        Load()
+        Load();
       }, []);
 
     async function Load(){
@@ -77,12 +77,12 @@ export function Header () {
                 if(person.name.toLowerCase().includes(value.toLowerCase())) {
                     results.push(person);
                     return
-                }
-            }))
+                };
+            }));
 
-            setList(results)
-        }
-    }
+            setList(results);
+        };
+    };
 
     return(
         <div className={style.container}>
