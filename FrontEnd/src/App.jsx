@@ -1,8 +1,7 @@
 import './global.css';
 import style from './App.module.css';
 import { CardPerson } from './components/CardPerson/CardPerson';
-import { Contato } from './components/Contatos/Contatos';
-import { Header } from './components/Header/Header'
+import { Header } from './components/Header/Header';
 
 export function App() {
   const listStack = ["JavaScript", "HTML", "CSS", "TypeScript", "React"];
