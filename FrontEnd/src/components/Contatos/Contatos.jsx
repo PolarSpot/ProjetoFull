@@ -8,9 +8,9 @@ export async function Delete() {
   if(cache === ''){
     alert('Erro! Contato não definido!');
   }else{
-    await server.delete(`user/${cache}`)
-  }
-}
+    await server.delete(`user/${cache}`);
+  };
+};
 
 export async function Update(user) {
   if(cache === ''){
@@ -25,15 +25,15 @@ export async function Update(user) {
       avatar: avatar,
       celular: cell,
     });
-  }
-}
+  };
+};
 
 export function Contato ({avatar, name, phone, id}) {
 
     function Cache(id) {
       cache = id;
       console.log("Cache definido para " + cache);
-    }
+    };
 
     return(
         <div className={style.container}>
