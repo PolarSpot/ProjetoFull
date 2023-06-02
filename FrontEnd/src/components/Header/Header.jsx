@@ -26,6 +26,10 @@ export function Header () {
         console.log(list);
     }
 
+    function refreshPage(){
+        window.location.reload();
+    } 
+
     async function Adicionar(){
 
         const resultAPI = await api.get("/");
@@ -47,6 +51,7 @@ export function Header () {
     async function Deletar() {
         Delete();
         Load();
+        refreshPage();
     }
 
     async function Editar() {
@@ -57,7 +62,27 @@ export function Header () {
     
         Update(user);
         Load();
-      }
+        refreshPage();
+    }
+
+    function Pesquisar(event) {
+        event.preventDefault();
+
+        if( value === '') {
+            Load();
+        }else{
+            let results = [];
+
+            list.map((person => {
+                if(person.name.toLowerCase().includes(value.toLowerCase())) {
+                    results.push(person);
+                    return
+                }
+            }))
+
+            setList(results)
+        }
+    }
 
     return(
         <div className={style.container}>
@@ -80,8 +105,9 @@ export function Header () {
 
                 <div className={style.searchBox}>
 
-                    <img src={searchIcon} alt="Search Icon"/>
-                    <input type="text" name="Search" placeholder="Busque por um nome ou por dados de contato..."/>
+                    <img src={searchIcon} alt="Search Icon" onClick={Pesquisar}/>
+                    <input type="text" name="Search" placeholder="Busque por um nome ou por dados de contato..." 
+                            value={value} onChange={() => { setValue(event.target.value) }}/>
 
                 </div>
             </div>

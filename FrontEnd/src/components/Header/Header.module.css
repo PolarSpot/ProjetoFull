@@ -89,7 +89,12 @@
 .searchBox > img {
     width: 13px;
     height: 13px;
+    cursor: pointer;
 
+}
+
+.searchBox > img:active{
+    opacity: 50%;
 }
 
 .contactList {
