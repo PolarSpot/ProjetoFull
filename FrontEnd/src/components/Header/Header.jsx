@@ -74,7 +74,7 @@ export function Header () {
             let results = [];
 
             list.map((person => {
-                if(person.name[0].toLowerCase().includes(value.toLowerCase())) {
+                if(person.name.toLowerCase().includes(value.toLowerCase())) {
                     results.push(person);
                     return
                 };
